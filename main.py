@@ -13,3 +13,9 @@
 # Class for comparing plugin profiles and outputting relevant statistics and data to aid collaborators in making decisions on using plugins, tools, etc...
 # GUI for ease of use
 # Unit tests
+
+def main():
+    pass
+
+if __name__ == "__main__":
+    main()
