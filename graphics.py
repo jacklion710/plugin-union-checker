@@ -79,7 +79,14 @@ class Window(Tk):
                 self.command_window.insert("end", f"Searching directory: {search_path}\n")
                 self.command_window.configure(state="disabled")
                 self.command_window.see("end")
-                plugins.update(self.search.search_folder(search_path, total_files, processed_files))
+                found_plugins = self.search.search_folder(search_path, total_files, processed_files)
+                plugins.update(found_plugins)
+                # Display the found plugins in the command window
+                for plugin, formats in found_plugins.items():
+                    self.command_window.configure(state="normal")
+                    self.command_window.insert("end", f"{plugin}: {', '.join(formats)}\n")
+                    self.command_window.configure(state="disabled")
+                    self.command_window.see("end")
             else:
                 print(f"Search path not found: {search_path}")
 
@@ -88,14 +95,6 @@ class Window(Tk):
         for plugin, formats in plugins.items():
             print(f"{plugin}: {', '.join(formats)}")
 
-        # Display the found plugins in the command window
-        self.command_window.configure(state="normal")
-        self.command_window.insert("end", "\nFound Plugins:\n")
-        for plugin, formats in plugins.items():
-            self.command_window.insert("end", f"{plugin} ({', '.join(formats)})\n")
-        self.command_window.configure(state="disabled")
-        self.command_window.see("end")
-
         # Stop the progress bar
         self.progress_bar.stop()
         self.progress_bar.destroy()
@@ -103,14 +102,16 @@ class Window(Tk):
         # Enable the search button and disable the stop button
         self.search_button.config(state="normal")
         self.stop_button.config(state="disabled")
-    
+
     def stop_search(self):
         self.search.stop_flag = True
         self.stop_button.config(state="disabled")
         
     def save_profile(self):
-        # Get the plugin profile from the command window
-        profile = self.command_window.get("1.0", "end-1c")
+        # Get the plugin profile from the search results
+        profile = ""
+        for plugin, formats in self.search.plugins.items():
+            profile += f"{plugin}: {', '.join(formats)}\n"
 
         # Ask the user for their name
         user_name = simpledialog.askstring("User Name", "Please enter your name:")
@@ -120,10 +121,7 @@ class Window(Tk):
             formatted_profile = f"User's Name: {user_name}\n"
             formatted_profile += f"User's OS: {self.search.os}\n\n"
             formatted_profile += "Plugins:\n"
-            for line in profile.split("\n"):
-                if ":" in line:
-                    plugin, formats = line.split(":", 1)
-                    formatted_profile += f"{plugin.strip()} [{formats.strip()}]\n"
+            formatted_profile += profile
 
             # Ask the user for a file path to save the profile
             file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text Files", "*.txt")])

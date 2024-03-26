@@ -54,11 +54,24 @@ class Search():
                     _, file_extension = os.path.splitext(item)
                     if file_extension.lower() in [".component", ".vst", ".vst3", ".aaxplugin"]:
                         plugin_name = os.path.splitext(item)[0]
-                        plugin_format = file_extension[1:].upper()
+                        plugin_format = ""
+                        if file_extension.lower() == ".component":
+                            plugin_format = "AU"
+                        elif file_extension.lower() == ".vst":
+                            plugin_format = "VST"
+                        elif file_extension.lower() == ".vst3":
+                            plugin_format = "VST3"
+                        elif file_extension.lower() == ".aaxplugin":
+                            plugin_format = "AAX"
                         if plugin_name not in plugins:
                             plugins[plugin_name] = [plugin_format]
                         else:
                             plugins[plugin_name].append(plugin_format)
+                        # Display the found plugin in the command window
+                        self.window.command_window.configure(state="normal")
+                        self.window.command_window.insert("end", f"{plugin_name}: {plugin_format}\n")
+                        self.window.command_window.configure(state="disabled")
+                        self.window.command_window.see("end")
                         # Print the found plugin to the console
                         print(f"Found: {plugin_name} ({plugin_format})")
                     processed_files.append(item_path)
