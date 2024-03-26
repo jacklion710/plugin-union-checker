@@ -11,6 +11,7 @@ class Compare():
         p1 = self.profile1
         p2 = self.profile2
 
+        # Create list of shared plugins
         for plugin, formats in p1.items():
             if plugin in p2:
                 common_formats = set(formats) & set(p2[plugin])
@@ -21,7 +22,8 @@ class Compare():
                     not_shared_plugins[plugin] = list(not_shared_formats)
             else:
                 not_shared_plugins[plugin] = formats
-
+        
+        # Create list of plugins not shared
         for plugin, formats in p2.items():
             if plugin not in p1:
                 not_shared_plugins[plugin] = formats
@@ -32,6 +34,7 @@ class Compare():
         common_plugins, not_shared_plugins = self.compare_profiles()
         output_path = report_output
 
+        # Create common profile report
         with open(output_path, "w") as file:
             file.write(f"{user1_name} and {user2_name} common plugins profile\n\n")
             file.write("Plugins shared:\n")
