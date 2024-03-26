@@ -1,6 +1,7 @@
 # graphics.py
 from tkinter import Tk, ttk, Frame, Button, Text, Scrollbar, filedialog, messagebox, simpledialog
 from file_search import Search
+from compare import Compare
 import threading
 from tkinter import Tk
 import os
@@ -30,6 +31,10 @@ class Window(Tk):
         # Create a save button
         save_button = Button(button_frame, text="Save Profile", command=self.save_profile)
         save_button.pack(side="left", padx=5)
+
+        # Create a compare button
+        compare_button = Button(button_frame, text="Compare Profiles", command=self.compare_profiles)
+        compare_button.pack(side="left", padx=5)
 
         # Create a command window
         self.command_window = Text(self, wrap="word", state="disabled")
@@ -156,3 +161,45 @@ class Window(Tk):
                     messagebox.showinfo("Save Profile", "Plugin profile saved successfully.")
                 except IOError:
                     messagebox.showerror("Save Profile", "An error occurred while saving the profile.")
+
+    def compare_profiles(self):
+        user1_profile_path = filedialog.askopenfilename(title="Select User 1 Profile", initialdir="profiles/user1", filetypes=[("Text Files", "*.txt")])
+        user2_profile_path = filedialog.askopenfilename(title="Select User 2 Profile", initialdir="profiles/user2", filetypes=[("Text Files", "*.txt")])
+
+        if user1_profile_path and user2_profile_path:
+            user1_profile = self.load_profile(user1_profile_path)
+            user2_profile = self.load_profile(user2_profile_path)
+
+            if user1_profile and user2_profile:
+                user1_name = user1_profile.split("\n")[0].split("'s Plugin Profile")[0]
+                user2_name = user2_profile.split("\n")[0].split("'s Plugin Profile")[0]
+
+                user1_plugins = self.extract_plugins(user1_profile)
+                user2_plugins = self.extract_plugins(user2_profile)
+
+                compare = Compare(user1_plugins, user2_plugins)
+                common_report_path = f"profiles/common_report/{user1_name}_{user2_name}_common_report.txt"
+                compare.output_common_plugins(common_report_path, user1_name, user2_name)
+
+                messagebox.showinfo("Compare Profiles", "Profile comparison completed. Common report generated.")
+            else:
+                messagebox.showerror("Compare Profiles", "Failed to load user profiles.")
+        else:
+            messagebox.showinfo("Compare Profiles", "No profiles selected for comparison.")
+
+    def load_profile(self, profile_path):
+        try:
+            with open(profile_path, "r") as file:
+                profile_content = file.read()
+            return profile_content
+        except IOError:
+            return None
+
+    def extract_plugins(self, profile_content):
+        plugins = {}
+        lines = profile_content.split("\n")
+        for line in lines:
+            if ":" in line:
+                plugin, formats = line.split(":", 1)
+                plugins[plugin.strip()] = [format.strip() for format in formats.split(",")]
+        return plugins
