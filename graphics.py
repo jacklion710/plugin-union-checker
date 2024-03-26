@@ -49,6 +49,8 @@ class Window(Tk):
         self.command_window.delete("1.0", "end")
 
         # Display the user's OS
+        if user_os == "Darwin":
+            user_os = "MacOS"
         self.command_window.insert("end", f"Operating System: {user_os}\n\n")
         self.command_window.insert("end", "Searching for plugins...\n")
         self.command_window.configure(state="disabled")
