@@ -171,6 +171,7 @@ class Window(Tk):
             user2_profile = self.load_profile(user2_profile_path)
 
             if user1_profile and user2_profile:
+                # Extract the user names from the profile content
                 user1_name = user1_profile.split("\n")[0].split("'s Plugin Profile")[0]
                 user2_name = user2_profile.split("\n")[0].split("'s Plugin Profile")[0]
 
@@ -198,8 +199,14 @@ class Window(Tk):
     def extract_plugins(self, profile_content):
         plugins = {}
         lines = profile_content.split("\n")
+
         for line in lines:
             if ":" in line:
+                # Split the line into plugin name and formats
                 plugin, formats = line.split(":", 1)
+                
+                # Add the plugin and its formats to the plugins dictionary
                 plugins[plugin.strip()] = [format.strip() for format in formats.split(",")]
+
         return plugins
+
