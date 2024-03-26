@@ -8,6 +8,7 @@ class Search():
         self.os = self.detect_os()
         self.search_paths = self.set_search_paths()
         self.stop_flag = False
+        self.plugins = {}
 
     def detect_os(self):
         return platform.system()
@@ -30,19 +31,18 @@ class Search():
             raise OSError("Unsupported operating system")
         
     def search_folder(self, folder_path, total_files, processed_files):
-        plugins = {}
         searched_dirs = set()
         for search_path in self.search_paths:
             full_path = os.path.join(folder_path, os.path.basename(search_path))
             if os.path.exists(full_path) and full_path not in searched_dirs:
-                self.search_folder_r(plugins, full_path, total_files, processed_files)
+                self.search_folder_r(self.plugins, full_path, total_files, processed_files)
                 searched_dirs.add(full_path)
         if folder_path not in searched_dirs:
             try:
-                self.search_folder_r(plugins, folder_path, total_files, processed_files)
+                self.search_folder_r(self.plugins, folder_path, total_files, processed_files)
             except FileNotFoundError:
                 pass
-        return plugins
+        return self.plugins
 
     def search_folder_r(self, plugins, current_path, total_files, processed_files):
         try:

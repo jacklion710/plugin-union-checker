@@ -12,6 +12,7 @@ class Window(Tk):
         self.geometry("600x400")
         self.search = Search(self)
         self.create_widgets()
+        self.plugins = {}
 
     def create_widgets(self):
         # Create a frame for buttons
@@ -117,20 +118,32 @@ class Window(Tk):
         self.stop_button.config(state="disabled")
         
     def save_profile(self):
-        # Get the plugin profile from the search results
-        profile = ""
+        # Combine the plugin formats into a single dictionary
+        combined_plugins = {}
         for plugin, formats in self.search.plugins.items():
-            profile += f"{plugin}: {', '.join(formats)}\n"
+            if plugin not in combined_plugins:
+                combined_plugins[plugin] = formats
+            else:
+                combined_plugins[plugin].extend(formats)
+                combined_plugins[plugin] = list(set(combined_plugins[plugin]))
+
+        # Create the profile content
+        profile_content = ""
+        for plugin, formats in combined_plugins.items():
+            profile_content += f"{plugin}: {', '.join(formats)}\n"
 
         # Ask the user for their name
         user_name = simpledialog.askstring("User Name", "Please enter your name:")
 
+        if self.search.os == "Darwin":
+            self.search.os = "MacOS"
+
         if user_name:
             # Format the user profile
-            formatted_profile = f"User's Name: {user_name}\n"
-            formatted_profile += f"User's OS: {self.search.os}\n\n"
+            formatted_profile = f"{user_name}'s Plugin Profile\n\n"
+            formatted_profile += f"{self.search.os}\n\n"
             formatted_profile += "Plugins:\n"
-            formatted_profile += profile
+            formatted_profile += profile_content
 
             # Ask the user for a file path to save the profile
             file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text Files", "*.txt")])
