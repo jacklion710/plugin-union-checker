@@ -6,7 +6,7 @@ class Compare():
         self.profile2 = profile2
 
     def compare_profiles(self):
-        common_plugins = [] # or {}
+        common_plugins = {}
         p1 = self.profile1
         p2 = self.profile2
         # if item in profile 1 matches item in profile 2, add it to the union list
