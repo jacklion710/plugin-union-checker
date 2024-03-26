@@ -82,9 +82,16 @@ class Window(Tk):
                 found_plugins = self.search.search_folder(search_path, total_files, processed_files)
                 plugins.update(found_plugins)
                 # Display the found plugins in the command window
-                for plugin, formats in found_plugins.items():
+                if found_plugins:
                     self.command_window.configure(state="normal")
-                    self.command_window.insert("end", f"{plugin}: {', '.join(formats)}\n")
+                    self.command_window.insert("end", "Found plugins:\n")
+                    for plugin, formats in found_plugins.items():
+                        self.command_window.insert("end", f"{plugin}: {', '.join(formats)}\n")
+                    self.command_window.configure(state="disabled")
+                    self.command_window.see("end")
+                else:
+                    self.command_window.configure(state="normal")
+                    self.command_window.insert("end", "No plugins found in this directory.\n")
                     self.command_window.configure(state="disabled")
                     self.command_window.see("end")
             else:
