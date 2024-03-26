@@ -1,0 +1,606 @@
+dillons profile's Plugin Profile
+
+MacOS
+
+Plugins:
+ShaperBox: AU, VST
+Action Filter: AU, VST3, AAX
+Glitch2: AU, VST
+LegendFX: AU
+Canvas: AU
+kHs Distortion: AU, VST
+Decapitator: AU, VST, AAX
+EnergyPanner: AU, VST3, AAX
+EmergentDrums: AU, VST3
+Kontakt 5: AU, VST, AAX
+FilterFreak2: AU, VST, AAX
+DAWLP: AU, VST, VST3, AAX
+Snap Heap: AU, VST
+MNSuperFilterBank: AU
+kHs Frequency Shifter: AU, VST
+Scaler2: AU, VST, VST3, AAX
+st1b: AU, VST, VST3
+kHs Limiter: AU, VST
+AVOX WARM: AU, VST3, AAX
+Akoustic: AU, VST
+Strum GS-2: AU, VST, VST3, AAX
+MNSpectralPartialGlide: AU
+Radiator: AU, VST, AAX
+kHs Flanger: AU, VST
+LittleRadiator: AU, VST, AAX
+LVL01: AU, VST3
+Eidolon: AU, VST
+PitchMonster: AU, VST, VST3, AAX
+Action Tremolo: AU, VST3, AAX
+FabFilter Pro-C 2: AU, VST, VST3, AAX
+Auto-Key: AU, VST3, AAX
+MNSpectralFreezing: AU
+SpeakerSim: AU, VST3, AAX
+kHs Transient Shaper: AU, VST
+Action Delay - m to s: AU, AAX
+Rift Filter Lite: AU, VST, VST3
+MNSpectralStretch: AU
+Devil-Loc_Deluxe: AU, VST, AAX
+Duck: AU, VST, VST3, AAX
+st4b: AU, VST, VST3
+MNSpectralShimmer: AU
+Riffer: AU, VST, VST3, VST3, AAX
+Relayer: AU, VST, VST3, AAX
+AVOX ASPIRE: AU, VST3, AAX
+I Wish 64: AU, VST, AAX
+MNSpectralEmergence: AU
+PITCHMAP AU: AU
+kHs 3-Band EQ: AU, VST
+soothe2: AU, VST3
+I Wish 32: AU, VST, AAX
+kHs Reverser: AU, VST
+SPAN: AU, VST
+MNSpectralPitchShift: AU
+kHs Haas: AU, VST
+Thorus: AU, VST, VST3, AAX
+FabFilter Volcano 2: AU, VST, VST3, AAX
+kHs Chorus: AU, VST
+MNSpectralWeave: AU
+XO: AU, VST, VST3, AAX
+Playbeat: AU, VST, VST3, AAX
+EchoBoyJr: AU, VST, AAX
+Stereo Finalizer - m to s: AU, AAX
+crusher-X-DEMO: AU, VST
+Action Tremolo - m to s: AU, AAX
+Action Delay: AU, VST3, AAX
+Re-Function: AU, VST
+Foomph: AU, VST
+WaveShell-AU 8.0: AU
+LittleAlterBoy: AU, VST, AAX
+Remnant: AU, VST, VST3
+Kick 2: AU, VST, AAX
+Multipass: AU, VST
+Tremolator: AU, VST, AAX
+FabFilter Micro: AU, VST, VST3, AAX
+FabFilter Pro-L 2: AU, VST, VST3, AAX
+ronn: AU, VST3
+PluginDoctor: AU, VST, VST3, AAX
+Shade: AU, VST, VST3, AAX
+JUNO-60 CHORUS: AU, VST3
+VISION 4X: AU, VST, VST3, AAX
+MNSpectralGranulation: AU
+FabFilter Pro-G: AU, VST, VST3, AAX
+Mic Mod EFX: AU, VST3, AAX
+Sennheiser AMBEO Orbit: AU, VST, VST3, AAX
+Legend: AU, VST3
+Listento: AU, VST, VST3, AAX
+FabFilter One: AU, VST, VST3, AAX
+Sonarworks Reference 4 plugin: AU, VST
+kHs Channel Mixer: AU, VST
+FrozenVerb: AU, VST3, AAX
+LittlePrimalTap: AU, VST, AAX
+FabFilter Pro-R: AU, VST, VST3, AAX
+iZRX10VoiceDe-noiseAUHook: AU
+IdeeFixer: AU
+occularScope: AU, VST, VST3
+Raum: AU, VST
+ValhallaSupermassive: AU, VST, AAX
+Eos 2: AU, VST, VST3, AAX
+Stereo Finalizer: AU, VST3, AAX
+Vital: AU, VST, VST3
+kHs Trance Gate: AU, VST
+AVOX SYBIL: AU, VST3, AAX
+STARK: AU, VST, VST3, AAX
+Addictive Drums 2: AU, VST, VST3, AAX
+Auburn Sounds Panagement 2: AU, VST, VST3, AAX
+SoundID Reference AU Plugin: AU
+Baervaag: AU, VST, VST3
+kHs Phaser: AU, VST
+MNSpectralAveraging: AU
+MiniMetersServer: AU, VST3
+MNSpectralBlurring: AU
+Phase Plant: AU, VST
+ValhallaVintageVerbAU64: AU
+MNSpectralBinShift: AU
+SonoBus: AU, VST, VST3, AAX
+Kleverb: AU, VST, VST3, AAX
+LFOTool_MFX: AU
+Pipa: AU, VST3, AAX
+Knorr: AU, VST, VST3, AAX
+kHs Gain: AU, VST
+Solveig: AU, VST
+kHs Nonlinear Filter: AU, VST
+iZRX10De-humAUHook: AU
+Disperser: AU, VST
+Morph EQ: AU, VST, VST3
+kHs Ring Mod: AU, VST
+Trackspacer25: AU, VST, VST3, AAX
+ScalerAudio2: AU, VST, VST3, AAX
+Skaka: AU, VST, VST3, AAX
+Weave: AU, VST
+Harmony Engine: AU, VST3, AAX
+FabFilter Simplon: AU, VST, VST3, AAX
+MNSpectralHarmonizer: AU
+ShapeShifter: AU
+Infiltrator: AU, VST, VST3, AAX
+kHs Filter: AU, VST
+Fathoms: AU, VST
+kHs Formant Filter: AU, VST
+Pastfabric: AU, VST
+Hatz: AU, VST, VST3
+AVOX DUO: AU, VST3, AAX
+FabFilter Pro-DS: AU, VST3, AAX
+Crystallizer: AU, VST, AAX
+Vocal Finalizer: AU, VST3, AAX
+Chorus: AU
+MOscilloscope: AU, VST3
+Devil-Loc: AU, VST, AAX
+Cloud Machine: AU, VST
+DenisePerfectRoom: AU, VST, VST3, AAX
+PhaseMistress: AU, VST, AAX
+AVOX THROAT: AU, VST3, AAX
+Zerone: AU, VST
+SpliceBridge: AU, VST3
+SieQ: AU, VST, AAX
+Spacer: AU, VST, VST3
+MNSpectralTracing: AU
+AVOX CHOIR: AU, VST3, AAX
+Helper-Saturator: AU, VST, VST3
+ValhallaRoomAU64: AU
+Washout: AU, VST
+DualDelayX: AU, VST, VST3, AAX
+MicroShift: AU, VST, AAX
+iZRX10De-clipAUHook: AU
+PanMan: AU, VST, AAX
+eigen: AU, VST3, AAX
+FrozenVerb - m to s: AU, AAX
+MSED: AU, VST3, VST, VST3
+FL Studio: AU
+Boost: AU, VST3, AAX
+EffectRack: AU, VST, AAX
+Youlean Loudness Meter 2: AU, VST, VST3, AAX
+Spinn: AU, VST, VST3, AAX
+kHs Compressor: AU, VST
+Esspresso: AU, VST, VST3, AAX
+LittleMicroShift: AU, VST, AAX
+FabFilter Pro-MB: AU, VST, VST3, AAX
+MNSpectralGlidingFilters: AU
+MNSpectralGateAndHold: AU
+EchoBoy: AU, VST, AAX
+DeniseNoize2: AU, VST, VST3, AAX
+Listento-Receiver: AU, VST, VST3, AAX
+kHs Reverb: AU, VST
+Devastor2: AU, VST
+AVOX MUTATOR: AU, VST3, AAX
+DAWCassette: AU, VST, VST3, AAX
+kHs Tape Stop: AU, VST
+kHs Gate: AU, VST
+VinylStrip: AU, VST
+Toraverb2: AU, VST
+Slammer: AU, VST, VST3, AAX
+String Studio VS-3: AU, VST, VST3, AAX
+Stranular_1.2: AU, VST3
+Rift: AU, VST, VST3
+SparkVerb: AU, VST, VST3, AAX
+FabFilter Timeless 2: AU, VST, VST3, AAX
+Verv: AU, VST
+ShaperBox 2: AU, VST, AAX
+LittlePlate: AU, VST, AAX
+Serum: AU, VST, VST3, AAX
+Noises: AU, VST, VST3, AAX
+kHs Convolver: AU, VST
+MNSpectralDroneMaker: AU
+Faturator: AU, VST
+iZRX10De-reverbAUHook: AU
+Kristall: AU, VST
+Texture: AU, VST, VST3, AAX
+FilterFreak1: AU, VST, AAX
+kHs Phase Distortion: AU, VST
+iZRX10De-clickAUHook: AU
+PrimalTap: AU, VST, AAX
+Signalizer: AU, VST
+Heater: AU, VST3, AAX
+Carve EQ: AU, VST
+kHs Pitch Shifter: AU, VST
+Splitch: AU, VST
+ScalerControl2: AU
+MutantReverb: AU, VST, VST3, AAX
+FabFilter Pro-Q 3: AU, VST, VST3, AAX
+iZRX10RepairAssistantAUHook: AU
+Guitar Rig 5: AU, VST, AAX
+Grind: AU, VST, VST3, AAX
+Slice EQ: AU, VST
+Rotary: AU, VST, VST3, AAX
+kHs Delay: AU, VST
+Keyscape: AU, VST, VST3, AAX
+dearVR MIX: AU, VST3
+Clonemeld: AU, VST
+DimensionExpander: AU, VST
+Synplant: AU, VST
+Devastator: AU, VST3, AAX
+Action Phaser - m to s: AU, AAX
+SuperVHS: AU, VST, VST3, AAX
+ValhallaSpaceModulator: AU, VST, VST3, AAX
+apShaper: AU, VST
+MNSpectralPulsing: AU
+Action Phaser: AU, VST3, AAX
+Falcon: AU, VST, VST3, AAX
+Dear Reality Exoverb: AU, VST3
+FabFilter Saturn 2: AU, VST, VST3, AAX
+AVOX ARTICULATOR: AU, VST3, AAX
+MNSpectralFilterbank: AU
+Vocal Finalizer - m to s: AU, AAX
+kHs Resonator: AU, VST
+kHs Dual Delay: AU, VST
+Speektra: AU, VST
+kHs Comb Filter: AU, VST
+AVOX PUNCH: AU, VST3, AAX
+Brushify Pro: AU, VST
+PA3: AU
+Superior Drummer 3: AU, VST, VST3
+kHs Bitcrush: AU, VST
+neutone: AU, VST3
+Auto-Tune: AU, VST3, AAX
+SpacedOut: AU, VST, VST3, AAX
+RC-20 Retro Color: AU, VST, VST3, AAX
+GrainStreamer: AU
+Diva: AU, VST, VST3, AAX
+Decimort2: AU, AAX
+Unfiltered Audio Triad: AU, VST3, AAX
+Reaktor 6: AU, VST, AAX
+kHs Ensemble: AU, VST
+FabFilter Timeless 3: AU, VST, VST3, AAX
+Novum: AU, VST3
+MLoudnessAnalyzer: AU, VST3
+Auburn Sounds Graillon 2: AU, VST3, AAX
+kHs Ladder Filter: AU, VST
+Octavlord: AU, VST
+Chromaphone 2: AU, VST, VST3, AAX
+MNSpectralShuffle: AU
+LFOTool: AU, VST, AAX
+ANOTHERTRY: AU
+kHs Dynamics: AU, VST
+SketchCassette: AU
+kHs Stereo: AU, VST
+FabFilter Twin 2: AU, VST, VST3, AAX
+Echorus: VST
+CamelCrusher: VST
+Relay: VST
+Kontakt 5 16out: VST
+Dust (fx): VST
+ValhallaRoom_x64: VST
+apUnmask: VST
+Synclavier V: VST, VST3, AAX
+BitterSweetV3-x64: VST, AAX
++morphfilter: VST
+FogConvolver: VST
+Unfiltered Audio SpecOps: VST3, VST, AAX
+Ghz Tiltshift 3: VST
+Krush: VST, AAX
+Kontakt 5 8out: VST
+Unfiltered Audio Indent 2: VST3, VST
+Ghz Megaverb 3: VST
+FL Studio VSTi: VST
+DYNASAUR: VST
++spectralcompand: VST
+Unfiltered Audio Dent 2: VST3, VST, AAX
+CamelPhat: VST
+tkDelay: VST
+Unfiltered Audio Zip: VST, VST3
+Reaktor 6 FX: VST
+Ghz CanOpener Studio 3: VST
+Kontakt: VST, AAX
+WaveBox: VST
+Sonarworks Reference 4 Plugin(x86): VST, AAX
+Ghz Tone Control 3: VST
+Mini V3: VST, VST3
+Unfiltered Audio Sandman: VST, VST3
+SPAN Plus: VST
+KV_ElementFX: VST
+TubeSaturatorVintage: VST, AAX
+Bitter: VST, AAX
+Moodal: VST
+Unfiltered Audio Fault: VST3, VST
+W-Noize.vst3: VST
+OTT: VST, AAX
+Dust: VST
+tranQuilizr: VST
+Wave_Shredder: VST
+tranQuilizr_G2: VST
+Cyclic_Panner: VST
+Sakura_Dither: VST
+Stereo_Imager_D: VST
+Movement: VST, AAX
+ValveExciter: VST, AAX
+Multiply: VST, AAX
+True Iron: VST
+Thermal: VST3, VST, AU
+Ghz Midside 3: VST
++spectralgate: VST
+Unfiltered Audio Sandman Pro: VST3, VST
+Comp FET-76: VST, VST3
+KV_Element: VST
+TAL-U-NO-LX-V2: VST
+StereoToolV3-x64: VST, AAX
+Ghz Midside Matrix 3: VST
+Mini-Filter: VST, VST3
+Manipulator32: VST
+WaveShell-VST 8.0: VST, VST3
+Spin: VST
+Ghz Good Dither 3: VST
+cadmium: VST
+Smexoscope: VST
+Kombinat Tri: VST
+Continua: VST
+ADverb2: VST
+Enso: VST
+Discord4: VST
+Quanta: VST
+Dubstation 2: VST
+PhaseThree: VST
+Vinylizer: VST
+Ghz Lossy 3: VST
+Ghz Trem Control 3: VST
+Ghz Panpot 3: VST
+soothe: VST, VST3
+Invisible_Limiter: VST
+SpaceStrip: VST
+Gatekeeper: VST, VST3
+NUGEN Stereoizer3: VST
+SoundID Reference VST Plugin: VST
+Portal: VST, AAX
+apQualizr2: VST
+SnareBuzz: VST
+Hats: VST
+Unfiltered Audio G8: VST, VST3
+apTrigga3: VST
++binaural: VST
+Uhbik-D: VST
+Uhbik-S: VST
+Uhbik-Q: VST
+Uhbik-F: VST
+Uhbik-G: VST
+Uhbik-P: VST
+Zebrify: VST
+Uhbik-T: VST
+MFM2: VST
+Uhbik-A: VST
+Runciter: VST
+Zebra2: VST
+Protoverb: VST, AAX
+ZRev: VST
+Zebralette: VST
+Puremagnetik Canvas: VST
+Cassette: VST
+Tritik-KrushPro: VST
+Ghz Wow Control 3: VST
+Manipulator: VST
+Tube Amp: VST3
+Ghz Lohi 3: VST
+ValhallaVintageVerb_x64: VST
+Ghz Vulf Compressor 3: VST
+Invisible_Limiter_G2: VST
+mvMeter2: VST, AAX
+Speaker: VST
+bx_distorange: VST, AAX
+SPL Attacker Plus: VST, AAX
+SPL Mo-Verb Plus: VST, AAX
+Unfiltered Audio TRIAD: VST
+Unfiltered Audio Instant Delay: VST, VST3
+PITCHMAP VST: VST
+TheOrb: VST
+Ghz Faraday Limiter 3: VST
+Farfisa V: VST, VST3
+Pigments: VST3
+NewProject: VST3
+PITCHMAP VST3: VST3
+MVintageRotary: VST3
+MVibrato: VST3
+MFlangerMB: VST3
+MFreqShifterMB: VST3
+MRingModulatorMB: VST3
+MChorusMB: VST3
+MRotary: VST3
+MVibratoMB: VST3
+MAutopan: VST3
+MPhaser: VST3
+MFreqShifter: VST3
+MFlanger: VST3
+MRingModulator: VST3
+MTremolo: VST3
+MAutopanMB: VST3
+MTremoloMB: VST3
+MPhaserMB: VST3
+MAutoPitch: VST3
+MHarmonizerMB: VST3
+MTransformer: VST3
+MCharacter: VST3
+MAGC: VST3
+MLimiterX: VST3
+MTransient: VST3
+MModernCompressor: VST3
+MCompressor: VST3
+MSpectralDynamicsMini: VST3
+MDynamics: VST3
+MSpectralDynamics: VST3
+MPhatik: VST3
+MTurboCompMB: VST3
+MDynamicsMB: VST3
+MDynamicsMBLarge: VST3
+MUltraMaximizer: VST3
+MTurboComp: VST3
+MTransientMB: VST3
+MDrumLeveler: VST3
+MAutoVolume: VST3
+MLimiterMB: VST3
+MRecorder: VST3
+MCompare: VST3
+MChannelMatrix: VST3
+MMetronome: VST3
+MOscillator: VST3
+MNoiseGenerator: VST3
+MMultiAnalyzer: VST3
+MNotepad: VST3
+MRatioMB: VST3
+MFreeformPhase: VST3
+MCCGenerator: VST3
+MRatio: VST3
+MTuner: VST3
+MAnalyzer: VST3
+MUtility: VST3
+MAutoAlign: VST3
+MDrummer1out: VST3
+MAutoStereoFix: VST3
+MStereoScope: VST3
+MStereoExpander: VST3
+MDoubleTracker: VST3
+MStereoGenerator: VST3
+MStereoProcessor: VST3
+MDoubleTrackerMB: VST3
+MSpectralPan: VST3
+MStereoSpread: VST3
+MMorphB: VST3
+MXXX6out: VST3
+MDistortionMB: VST3
+MSaturatorMB: VST3
+MWaveFolder: VST3
+MBitFun: VST3
+MBitFunMB: VST3
+MWaveShaper: VST3
+MWaveShaperMB: VST3
+MTurboAmp: VST3
+MAmp: VST3
+MWaveFolderMB: VST3
+MSaturator: VST3
+MDrummer16out: VST3
+MEqualizer: VST3
+MAutoDynamicEq: VST3
+MAutoEqualizerLP: VST3
+MTurboEQ: VST3
+MFreeformEqualizer: VST3
+MAutoEqualizer: VST3
+MEqualizerLP: VST3
+MFreeformAnalogEq: VST3
+MDynamicEq: VST3
+MDrumReplacer: VST3
+MXXX: VST3
+MMorph: VST3
+MUnison: VST3
+MSuperLooper16out: VST3
+MTurboReverb: VST3
+MReverbMB: VST3
+MConvolutionEZ: VST3
+MReverb: VST3
+MTurboReverbMB: VST3
+MCharmVerb: VST3
+MConvolutionMB: VST3
+MRhythmizerMB: VST3
+MRhythmizer: VST3
+MGranularMB: VST3
+MSoundFactory: VST3
+MPolySaturator: VST3
+MSuperLooper16in16out: VST3
+MXXX6in6out: VST3
+MPowerSynth: VST3
+MGuitarArchitect: VST3
+MXXX1: VST3
+MBassador: VST3
+MCabinet: VST3
+MCabinetMB: VST3
+MTurboFilter: VST3
+MWobblerMB: VST3
+MFilter: VST3
+MComb: VST3
+MCombMB: VST3
+MVocoder: VST3
+MWobbler: VST3
+MBandPass: VST3
+MTurboDelayMB: VST3
+MTurboDelay: VST3
+MSpectralDelay: VST3
+MDelayMB: VST3
+MDrumEnhancer: VST3
+MSoundFactory6out: VST3
+MSuperLooper: VST3
+MDrummer: VST3
+RX 10 De-hum: VST3
+Corn: VST3
+SpeakerSim CM: VST3
+Finally: VST3
+RX 10 De-reverb: VST3
+ValhallaVintageVerb: VST3, AAX
+Tulip: VST3
+SoundID Reference VST3 Plugin: VST3
+Mesh: VST3
+RX 10 De-clip: VST3
+SonoBusInstrument: VST3
+LevelMeterDemo: VST3
+RX 10 Repair Assistant: VST3
+RX 10 De-click: VST3
+Visualizer: VST3
+PaulXStretch: VST3, AAX
+ValhallaRoom: VST3, AAX
+RX 10 Voice De-noise: VST3
+RAVE Audition: VST3
+Fuck: VST3
+iZRX10De-reverbAAXHook: AAX
+iZOzone8AAXHook: AAX
+iZRelayAAXHook: AAX
+TAL-Vocoder-2: AAX
+iZInsight2AAXHook: AAX
+PITCHMAP AAX: AAX
+FabFilter Pro-Q 2: AAX
+iZRX10De-clipAAXHook: AAX
+ValhallaShimmer: AAX
+iZRX10De-clickAAXHook: AAX
+SerumFX: AAX
+iZRX10RepairAssistantAAXHook: AAX
+Uhbik: AAX
+iZMeterTapAAXHook: AAX
+ValhallaFreqEcho: AAX
+Solina V2: AAX
+Buchla Easel V: AAX
+Clavinet V: AAX
+CS-80 V3: AAX
+ARP 2600 V3: AAX
+Synthi V: AAX
+Wurli V2: AAX
+Prophet V3: AAX
+CZ V: AAX
+Modular V3: AAX
+DX7 V: AAX
+CMI V: AAX
+B-3 V2: AAX
+VOX Continental V2: AAX
+Analog Lab 4: AAX
+iZInsightAAXHook: AAX
+LVL01signed: AAX
+FabFilter Saturn: AAX
+chipspeech: AAX
+FM8: AAX
+FuzzPlus3: AAX
+Reformer Pro: AAX
+Battery 4: AAX
+iZRX10De-humAAXHook: AAX
+Sonarworks Reference 4 Plugin: AAX
+iZRX10VoiceDe-noiseAAXHook: AAX
+Objeq Delay: AAX
+Axis EQ: AAX
+WaveShell1-AAX 10.0: AAX
+SoundID Reference AAX Plugin: AAX
+iZTrash2AAXHook: AAX
