@@ -67,10 +67,11 @@ class Search():
                     else:
                         plugins[plugin_name].append(plugin_format)
                     # Display the found plugin in the command window
-                    self.window.command_window.configure(state="normal")
-                    self.window.command_window.insert("end", f"{plugin_name}: {plugin_format}\n")
-                    self.window.command_window.configure(state="disabled")
-                    self.window.command_window.see("end")
+                    if self.window is not None:
+                        self.window.command_window.configure(state="normal")
+                        self.window.command_window.insert("end", f"{plugin_name}: {plugin_format}\n")
+                        self.window.command_window.configure(state="disabled")
+                        self.window.command_window.see("end")
                     # Print the found plugin to the console
                     print(f"Found: {plugin_name} ({plugin_format})")
                     processed_files.append(item_path)
