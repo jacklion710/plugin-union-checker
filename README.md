@@ -91,6 +91,20 @@ pyinstaller --onefile --windowed main.py
 
 Note: On Windows, you may need to add the Python installation directory to your system's PATH environment variable for PyInstaller to work properly.
 
+4. You may need to create a virtual env using pip or conda to bundle the dependencies with pyinstaller properly. 
+
+```bash
+conda create --name myenv python=3.9
+```
+
+```bash
+conda activate myenv
+```
+
+```bash
+conda install pyinstaller
+```
+
 ## Usage
 
 1. Open a terminal or command prompt and navigate to the project directory.
@@ -101,7 +115,7 @@ Note: On Windows, you may need to add the Python installation directory to your 
 python main.py
 ```
 
-3. The Plugin Union Checker GUI will appear.
+3. The Plugin Union Checker GUI will appear. If you have a precompiled build feel free to simply run the executable or app bundle instead.
 
 4. Click the "Search Plugins" button to initiate the search for audio plugins on your system. The search progress will be displayed in the command window.
 
