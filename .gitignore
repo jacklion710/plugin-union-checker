@@ -1,2 +1,5 @@
 # Python caching
 __pycache__
+
+# Build folder
+dist/
