@@ -74,7 +74,7 @@ If the above steps don't work, you can try specifying the path to the Tcl/Tk lib
 pyinstaller --onefile --windowed --add-binary="$(python -c 'import tkinter; print(tkinter.Tcl().eval("info library"))')":tcl --add-binary="$(python -c 'import tkinter; print(tkinter.Tk().eval("info library"))')":tk main.py
 ```
 
-I recommend building on your own system but for convenience I have left an application bundle in `app/macos/main.app/Contents`
+I recommend building on your own system but for convenience I have left an application bundle in `app/macos/main.app/Contents` 
 
 ### Windows
 
