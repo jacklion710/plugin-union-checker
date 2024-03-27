@@ -52,7 +52,27 @@ pip install pyinstaller
 pyinstaller --onefile --windowed main.py
 ```
 
-3. The executable will be generated in the `dist` directory
+3. The executable `main.app` will be generated in the `dist` directory
+
+4. You may need to create a virtual env using pip or conda to bundle the dependencies with pyinstaller properly. 
+
+```bash
+conda create --name myenv python=3.9
+```
+
+```bash
+conda activate myenv
+```
+
+```bash
+conda install pyinstaller
+```
+
+If the above steps don't work, you can try specifying the path to the Tcl/Tk libraries explicitly using the `--add-binary` option:
+
+```bash
+pyinstaller --onefile --windowed --add-binary="$(python -c 'import tkinter; print(tkinter.Tcl().eval("info library"))')":tcl --add-binary="$(python -c 'import tkinter; print(tkinter.Tk().eval("info library"))')":tk main.py
+```
 
 ### Windows
 
@@ -68,8 +88,6 @@ pyinstaller --onefile --windowed main.py
 3. The executable will be generated in the dist directory.
 
 Note: On Windows, you may need to add the Python installation directory to your system's PATH environment variable for PyInstaller to work properly.
-
-
 
 ## Usage
 

@@ -1,5 +1,11 @@
 # Python caching
 __pycache__
 
-# Build folder
+# Build dirs
 dist/
+build/
+main.spec
+
+# pip env
+myenv
+
