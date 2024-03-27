@@ -34,6 +34,43 @@ The Plugin Union Checker is a Python application that allows users to search for
     pip install tk
     ```
 
+4. Install pyinstaller:
+
+```bash
+pip install pyinstaller
+```
+
+## Building the Application
+
+### macOS
+
+1. Open a terminal and navigate to the project directory.
+
+2. Run the following command to create a standalone executable:
+
+```bash
+pyinstaller --onefile --windowed main.py
+```
+
+3. The executable will be generated in the `dist` directory
+
+### Windows
+
+1. Open a command prompt and navigate to the project directory.
+
+2. Run the following command to create a standalone executable:
+bash
+
+```bash
+pyinstaller --onefile --windowed main.py
+```
+
+3. The executable will be generated in the dist directory.
+
+Note: On Windows, you may need to add the Python installation directory to your system's PATH environment variable for PyInstaller to work properly.
+
+
+
 ## Usage
 
 1. Open a terminal or command prompt and navigate to the project directory.
