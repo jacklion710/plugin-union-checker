@@ -14,18 +14,18 @@ class Search():
         return platform.system() # Users OS
     
     def set_search_paths(self):
-        if self.os == "Darwin":                                         # macOS
+        if self.os.lower() == "darwin":  # macOS
             return [
-                "/Library/Audio/Plug-Ins/Components",                   # AU
-                "/Library/Audio/Plug-Ins/VST",                          # VST
-                "/Library/Audio/Plug-Ins/VST3",                         # VST3
-                "/Library/Application Support/Avid/Audio/Plug-Ins"      # AAX
+                "/Library/Audio/Plug-Ins/Components",  # AU
+                "/Library/Audio/Plug-Ins/VST",  # VST
+                "/Library/Audio/Plug-Ins/VST3",  # VST3
+                "/Library/Application Support/Avid/Audio/Plug-Ins"  # AAX
             ]
-        elif self.os == "windows":
+        elif self.os.lower() == "windows":
             return [
-                "C:\\Program Files\\VSTPlugins",                        # VST
-                "C:\\Program Files\\Common Files\\VST3",                # VST3
-                "C:\\Program Files\\Common Files\\Avid\\Audio\\Plug-Ins"# AAX
+                "C:\\Program Files\\VSTPlugins",  # VST
+                "C:\\Program Files\\Common Files\\VST3",  # VST3
+                "C:\\Program Files\\Common Files\\Avid\\Audio\\Plug-Ins"  # AAX
             ]
         else:
             raise OSError("Unsupported operating system")
@@ -93,16 +93,16 @@ class Search():
                         self.window.command_window.configure(state="disabled")
                         self.window.command_window.see("end")
 
-                    # Print the found plugin to the console
-                    print(f"Found: {plugin_name} ({plugin_format})")
+                        # Print the found plugin to the console
+                        print(f"Found: {plugin_name} ({plugin_format})")
 
-                    # Add the processed file path to the list of processed files
-                    processed_files.append(item_path)
+                        # Add the processed file path to the list of processed files
+                        processed_files.append(item_path)
 
-                    # Update the progress bar
-                    progress = len(processed_files) / total_files * 100
-                    self.window.progress_bar["value"] = progress
-                    self.window.update_idletasks()  # Update the GUI
+                        # Update the progress bar
+                        progress = len(processed_files) / total_files * 100
+                        self.window.progress_bar["value"] = progress
+                        self.window.update_idletasks()  # Update the GUI
 
                 # If the current item is a directory, recursively search it
                 elif os.path.isdir(item_path):

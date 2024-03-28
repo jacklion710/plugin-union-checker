@@ -140,7 +140,7 @@ class Window(Tk):
         # Ask the user for their name
         user_name = simpledialog.askstring("User Name", "Please enter your name:")
 
-        if self.search.os == "Darwin":
+        if self.search.os.lower() == "darwin":
             self.search.os = "MacOS"
 
         if user_name:
