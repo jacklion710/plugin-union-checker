@@ -15,6 +15,10 @@ The Plugin Union Checker is a Python application that allows users to search for
 * Python 3.1 or greater
 * Tkinter (Python's standard GUI library)
 
+## Quickstart
+
+If you aren't don't wish to become entangled in the world of programming then I have left application builds for both Windows and MacOS in the `app/` directory.
+
 ## Installation
 
 1. Clone the repository or download the source code.
