@@ -78,7 +78,7 @@ If the above steps don't work, you can try specifying the path to the Tcl/Tk lib
 pyinstaller --onefile --windowed --add-binary="$(python -c 'import tkinter; print(tkinter.Tcl().eval("info library"))')":tcl --add-binary="$(python -c 'import tkinter; print(tkinter.Tk().eval("info library"))')":tk main.py
 ```
 
-I recommend building on your own system but for convenience I have left an application bundle in `app/macos/main.app/Contents` 
+I recommend building on your own system but for convenience I have left an application bundle in `app/macos/plugin-compatability-checker.app` 
 
 ### Windows
 
@@ -95,6 +95,22 @@ pyinstaller --onefile --windowed main.py
 
 Note: On Windows, you may need to add the Python installation directory to your system's PATH environment variable for PyInstaller to work properly.
 
+4. You may need to create a virtual env using pip or conda to bundle the dependencies with pyinstaller properly. 
+
+```bash
+conda create --name myenv python=3.9
+```
+
+```bash
+conda activate myenv
+```
+
+```bash
+conda install pyinstaller
+```
+
+I recommend building on your own system but for convenience I have left an application bundle in `app/win/plugin-compatability-checker.app` 
+
 ## Usage
 
 1. Open a terminal or command prompt and navigate to the project directory.
@@ -105,7 +121,7 @@ Note: On Windows, you may need to add the Python installation directory to your 
 python main.py
 ```
 
-3. The Plugin Union Checker GUI will appear.
+3. The Plugin Union Checker GUI will appear. If you have a precompiled build feel free to simply run the executable or app bundle instead.
 
 4. Click the "Search Plugins" button to initiate the search for audio plugins on your system. The search progress will be displayed in the command window.
 
