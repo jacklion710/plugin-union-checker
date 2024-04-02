@@ -17,7 +17,7 @@ The Plugin Union Checker is a Python application that allows users to search for
 
 ## Quickstart
 
-If you aren't don't wish to become entangled in the world of programming then I have left application builds for both Windows and MacOS in the `app/` directory.
+If you don't wish to become entangled in the world of programming then I have left application builds for both Windows and MacOS in the `app/` directory.
 
 ## Installation
 
