@@ -41,16 +41,17 @@ class SearchTests(unittest.TestCase):
         self.assertIn(detected_os, ["Darwin", "Windows", "Linux"])
 
     def test_search_folder(self):
-        plugins = self.search.search_folder(self.test_folder, len(os.listdir(self.test_folder)), [])
+        selected_formats = ["VST", "VST3"]
+        plugins = self.search.search_folder(self.test_folder, len(os.listdir(self.test_folder)), [], selected_formats)
         expected_plugins = {
-            "plugin1": ["AU", "VST"],
-            "plugin2": ["VST3"],
-            "plugin3": ["AAX"],
+            "plugin1": ["VST"],
+            "plugin2": ["VST3"]
         }
         self.assertEqual(self.sort_plugins(plugins), self.sort_plugins(expected_plugins))
 
     def test_search_folder_nonexistent(self):
-        plugins = self.search.search_folder("nonexistent_folder", 0, [])
+        selected_formats = ["AU", "VST", "VST3", "AAX"]
+        plugins = self.search.search_folder("nonexistent_folder", 0, [], selected_formats)
         self.assertEqual(plugins, {})
 
     def test_set_search_paths(self):
@@ -75,11 +76,11 @@ class SearchTests(unittest.TestCase):
     def test_search_folder_r(self):
         plugins = {}
         processed_files = []
-        self.search.search_folder_r(plugins, self.test_folder, len(os.listdir(self.test_folder)), processed_files)
+        selected_formats = ["VST", "VST3"]
+        self.search.search_folder_r(plugins, self.test_folder, len(os.listdir(self.test_folder)), processed_files, selected_formats)
         expected_plugins = {
-            "plugin1": ["AU", "VST"],
-            "plugin2": ["VST3"],
-            "plugin3": ["AAX"]
+            "plugin1": ["VST"],
+            "plugin2": ["VST3"]
         }
         self.assertEqual(self.sort_plugins(plugins), self.sort_plugins(expected_plugins))
     

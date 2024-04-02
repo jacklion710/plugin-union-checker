@@ -30,7 +30,7 @@ class Search():
         else:
             raise OSError("Unsupported operating system")
         
-    def search_folder(self, folder_path, total_files, processed_files):
+    def search_folder(self, folder_path, total_files, processed_files, selected_formats):
         searched_dirs = set()
         
         # Search directories
@@ -39,18 +39,18 @@ class Search():
 
             # If the path exists recursively search
             if os.path.exists(full_path) and full_path not in searched_dirs:
-                self.search_folder_r(self.plugins, full_path, total_files, processed_files)
+                self.search_folder_r(self.plugins, full_path, total_files, processed_files, selected_formats)
                 searched_dirs.add(full_path)
 
         # Try path if it hasn't been searched
         if folder_path not in searched_dirs:
             try:
-                self.search_folder_r(self.plugins, folder_path, total_files, processed_files)
+                self.search_folder_r(self.plugins, folder_path, total_files, processed_files, selected_formats)
             except FileNotFoundError:
                 pass
         return self.plugins
 
-    def search_folder_r(self, plugins, current_path, total_files, processed_files):
+    def search_folder_r(self, plugins, current_path, total_files, processed_files, selected_formats):
         try:
             # Recursively search for plugins in the current directory and its subdirectories
             for item in os.listdir(current_path):
@@ -64,8 +64,8 @@ class Search():
                 # Get the file extension of the current item
                 _, file_extension = os.path.splitext(item)
 
-                # Check if the file extension matches the supported plugin formats
-                if file_extension.lower() in [".component", ".vst", ".vst3", ".aaxplugin"]:
+                # Check if the file extension matches the selected plugin formats
+                if file_extension.lower() in [f".{format.lower()}" for format in selected_formats]:
                     # Extract the plugin name from the file name
                     plugin_name = os.path.splitext(item)[0]
 
@@ -110,7 +110,7 @@ class Search():
                     print(f"Entering directory: {item_path}")
 
                     # Recursively call the search_folder_r function for the subdirectory
-                    self.search_folder_r(plugins, item_path, total_files, processed_files)
+                    self.search_folder_r(plugins, item_path, total_files, processed_files, selected_formats)
 
         except PermissionError:
             # Skip directories or files that raise a PermissionError

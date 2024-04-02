@@ -1,10 +1,10 @@
 # graphics.py
-from tkinter import Tk, ttk, Frame, Button, Text, Scrollbar, filedialog, messagebox, simpledialog
+from tkinter import Tk, ttk, Frame, Button, Text, Scrollbar, filedialog, messagebox, simpledialog, Checkbutton
 from file_search import Search
 from compare import Compare
 import threading
-from tkinter import Tk
 import os
+import tkinter as tk
 
 class Window(Tk):
     def __init__(self):
@@ -35,6 +35,23 @@ class Window(Tk):
         # Create a compare button
         compare_button = Button(button_frame, text="Compare Profiles", command=self.compare_profiles)
         compare_button.pack(side="left", padx=5)
+
+        # Create a frame for format checkboxes
+        format_frame = Frame(self)
+        format_frame.pack(pady=10)
+
+        # Create format checkboxes
+        self.format_vars = {
+            "AU": tk.BooleanVar(value=True),
+            "VST": tk.BooleanVar(value=True),
+            "VST3": tk.BooleanVar(value=True),
+            "AAX": tk.BooleanVar(value=True)
+        }
+
+        for format, var in self.format_vars.items():
+            checkbox = Checkbutton(format_frame, text=format, variable=var)
+            checkbox.pack(side="left", padx=5)
+
 
         # Create a command window
         self.command_window = Text(self, wrap="word", state="disabled")
@@ -71,11 +88,14 @@ class Window(Tk):
         self.search_button.config(state="disabled")
         self.stop_button.config(state="normal")
 
+        # Get the selected formats
+        selected_formats = [format for format, var in self.format_vars.items() if var.get()]
+
         # Perform the plugin search in a separate thread
-        search_thread = threading.Thread(target=self.perform_search)
+        search_thread = threading.Thread(target=self.perform_search, args=(selected_formats,))
         search_thread.start()
 
-    def perform_search(self):
+    def perform_search(self, selected_formats):
         # Perform the plugin search
         plugins = {}
         total_files = sum(len(files) for search_path in self.search.search_paths for _, _, files in os.walk(search_path))
@@ -87,7 +107,7 @@ class Window(Tk):
                 self.command_window.insert("end", f"Searching directory: {search_path}\n")
                 self.command_window.configure(state="disabled")
                 self.command_window.see("end")
-                found_plugins = self.search.search_folder(search_path, total_files, processed_files)
+                found_plugins = self.search.search_folder(search_path, total_files, processed_files, selected_formats)
                 plugins.update(found_plugins)
                 # Display the found plugins in the command window
                 if found_plugins:
