@@ -178,6 +178,15 @@ class Window(Tk):
                 user1_plugins = self.extract_plugins(user1_profile)
                 user2_plugins = self.extract_plugins(user2_profile)
 
+                # Extract the operating systems from the profile content
+                user1_os = user1_profile.split("\n")[2].strip()
+                user2_os = user2_profile.split("\n")[2].strip()
+
+                # Check if at least one of the operating systems is MacOS
+                if user1_os == "MacOS" or user2_os == "MacOS":
+                    if user1_os != user2_os:
+                        messagebox.showinfo("Compare Profiles", "Reminder: only MacOS supports plugins of AU format, while Windows does not. Consider using VST or VST3 formats for compatibility.")
+
                 compare = Compare(user1_plugins, user2_plugins)
                 common_report_path = f"profiles/common_report/{user1_name}_{user2_name}_common_report.txt"
                 compare.output_common_plugins(common_report_path, user1_name, user2_name)
@@ -187,7 +196,7 @@ class Window(Tk):
                 messagebox.showerror("Compare Profiles", "Failed to load user profiles.")
         else:
             messagebox.showinfo("Compare Profiles", "No profiles selected for comparison.")
-
+            
     def load_profile(self, profile_path):
         try:
             with open(profile_path, "r") as file:
