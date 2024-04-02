@@ -1,6 +1,6 @@
 # Plugin Union Checker
 
-The Plugin Union Checker is a Python application that allows users to search for audio plugins on their system and generate a profile of the found plugins. Users can save their plugin profiles and compare them with others to find common plugins.
+The Plugin Union Checker is a Python application that allows users to search for audio plugins on their system and generate a profile of the found plugins. Users can save their plugin profiles and compare them with others to find common plugins. Currently the software is up to date but the application builds are not. More features coming soon.
 
 ## Features
 
